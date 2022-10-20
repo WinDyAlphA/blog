@@ -1,0 +1,74 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+#divTitle {
+	text-align: center;
+	font-family: "Poppins", sans-serif;
+	font-size: 1.5rem;
+	color: #000;
+	margin-top: 5vh;
+}
+.container-post {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 8vh;
+	margin: 4vh;
+}
+.post {
+	height: 370px;
+	width: 20rem;
+	margin: 2vh;
+	border-radius: 20px;
+	background-color: red;
+}
+.img {
+	height: 60%;
+	width: 100%;
+	border-radius: 20px 20px 0 0;
+}
+.texte {
+	height: 40%;
+	width: 100%;
+	border-radius: 0 0 20px 20px;
+	background-color: aqua;
+	overflow: hidden;
+}
+.link-blog {
+	display: block;
+	min-height: 100%;
+	min-width: 100%;
+}
+.title {
+	font-family: "Lucida Console", "Courier New", monospace;
+	font-size: 1.5rem;
+	color: #000;
+	margin-bottom: 5px;
+}
+a:link {
+	text-decoration: none;
+	padding-top: 1vh;
+	padding-left: 2vw;
+	font-family: "Lucida Console", "Courier New", monospace;
+	font-size: 1rem;
+	color: #000;
+}
+.description {
+	padding-bottom: 1vh;
+}
+/*media query min width 600px*/
+@media (min-width: 600px) {
+	.post {
+		height: 370px;
+		width: 32rem;
+		margin: 2vh;
+		border-radius: 20px;
+		background-color: red;
+	}
+}
