@@ -26,7 +26,8 @@
 	width: 20rem;
 	margin: 2vh;
 	border-radius: 20px;
-	background-color: red;
+	background: url(matrix.jpg);
+	background-size: cover;
 }
 .img {
 	height: 60%;
@@ -62,13 +63,13 @@ a:link {
 .description {
 	padding-bottom: 1vh;
 }
-/*media query min width 600px*/
 @media (min-width: 600px) {
 	.post {
 		height: 370px;
 		width: 32rem;
 		margin: 2vh;
 		border-radius: 20px;
-		background-color: red;
+		background: url(matrix.jpg);
+		background-size: cover;
 	}
 }
