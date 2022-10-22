@@ -13,6 +13,27 @@ const posts = [
 		page: "#",
 	},
 ];
+class post {
+	constructor(title, description, link, page) {
+		this.title = title;
+		this.description = description;
+		this.link = link;
+		this.page = page;
+	}
+	createPost() {
+		const post = document.createElement("div");
+		post.classList.add("post");
+		post.innerHTML = `
+        <div class="post" id="post04" style="margin-right:20px">
+            <div class="img" ></div>
+            <div class="texte"><a class="link-blog" href=""><p class="link-txt title">//Buffer overflow exploit</p><p class="link-txt description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, modi.lorem20 Lorem ipsum dolor sit amet consectetur,
+            adipisicing elit. Adipisci culpa labore quidem nihil suscipit unde vel reprehenderit accusamus autem incidunt!</p></a></div>
+        </div>
+        `;
+
+		return post;
+	}
+}
 let createNewPost = (post) => {
 	const newpost = document.createElement("div");
 	newpost.classList.add("post");
@@ -45,4 +66,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
 	const main = document.querySelector(".container-post");
 	main.appendChild(createNewPost(posts[0]));
 	main.appendChild(createNewPost(posts[1]));
+	posts[3] = {
+		title: "Creation object",
+		description: "description perso",
+		link: "test.jpg",
+		page: "test.html",
+	};
+	main.appendChild(createNewPost(posts[3]));
+	let post4 = new post("test", "test", "test.jpg", "test.html");
+	console.log(post4.createPost());
+	main.appendChild(post4.createPost());
 });
